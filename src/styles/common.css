@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'bebasneue';
+  src: url("../assets/fonts/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: 'rampartone';
+  src: url("../assets/fonts/RampartOne-Regular.ttf");
+}
+@font-face {
+  font-family: 'dotgothic';
+  src: url("../assets/fonts/DotGothic16-Regular.ttf");
+}
+@font-face {
+  font-family: 'NotoSansJP-R';
+  src: url("../assets/fonts/NotoSansJP-Regular.otf");
+}
+@font-face {
+  font-family: 'NotoSansJP-B';
+  src: url("../assets/fonts/NotoSansJP-Bold.otf");
+}
+@font-face {
+  font-family: 'DMSerifDisplay-R';
+  src: url("../assets/fonts/DMSerifDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: 'Kanit-SemiBold';
+  src: url("../assets/fonts/Kanit-SemiBold.ttf");
+}

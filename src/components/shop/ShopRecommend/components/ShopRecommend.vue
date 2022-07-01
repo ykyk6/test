@@ -1,0 +1,258 @@
+<template>
+  <div>
+    <div class="container">
+      <div class="items">
+        <div class="item" v-for="item in ShowTopItems" :key="item.name">
+          <a @click="toProduct(item)"
+            ><div class="img-box">
+              <div class="img-con">
+                <img :src="item.img[0].pic" alt="" />
+              </div>
+            </div>
+
+            <div class="name">
+              <p>{{ item.name }}</p>
+            </div>
+            <div class="type">
+              <p>{{ item.type }}</p>
+            </div>
+            <div class="price">
+              <p>{{ item.price }}税込</p>
+            </div></a
+          >
+        </div>
+        <div class="item" v-show="recommend_show_4">
+          <a @click="toProduct_N('009')"
+            ><div class="img-box">
+              <div class="img-con">
+                <img src="@/assets/img/009-01.jpg" alt="" />
+              </div>
+            </div>
+
+            <div class="name"><p>デニムシャツ</p></div>
+            <div class="type"><p>トップス/シャツ</p></div>
+            <div class="price"><p>￥1,980税込</p></div></a
+          >
+        </div>
+        <div class="item" v-show="recommend_show_3">
+          <a @click="toProduct_N('010')"
+            ><div class="img-box">
+              <div class="img-con">
+                <img src="@/assets/img/010-01.jpg" alt="" />
+              </div>
+            </div>
+
+            <div class="name"><p>７分袖Ｖカーデ</p></div>
+            <div class="type"><p>トップス/カーディガン</p></div>
+            <div class="price"><p>￥1,980税込</p></div></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref, onMounted, watchEffect } from 'vue'
+import { useRouter } from 'vue-router'
+import { TopsItems } from '@/data/shop/TopsItems'
+export default defineComponent({
+  setup() {
+    // 商品數量
+    let recommend_show_4 = ref(true)
+    let recommend_show_3 = ref(true)
+    const router = useRouter()
+    onMounted(() => {
+      let offsetWidth = document.documentElement.offsetWidth
+      if (offsetWidth >= 1030 - 17 && offsetWidth < 1298 - 17) {
+        recommend_show_3.value = false
+        recommend_show_4.value = false
+      } else if (offsetWidth > 809 - 17 && offsetWidth <= 1029 - 17) {
+        recommend_show_3.value = false
+        recommend_show_4.value = true
+      } else {
+        recommend_show_4.value = true
+        recommend_show_3.value = true
+      }
+    })
+    watchEffect(() => {
+      window.onresize = () => {
+        let offsetWidth = document.documentElement.offsetWidth
+        if (offsetWidth >= 1030 - 17 && offsetWidth < 1298 - 17) {
+          recommend_show_3.value = false
+          recommend_show_4.value = false
+        } else if (offsetWidth > 809 - 17 && offsetWidth <= 1029 - 17) {
+          recommend_show_3.value = false
+          recommend_show_4.value = true
+        } else {
+          recommend_show_4.value = true
+          recommend_show_3.value = true
+        }
+      }
+    })
+
+    const ShowTopItems = TopsItems.filter((item) => {
+      return item.id !== '009' && item.id !== '010'
+    })
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const toProduct = (item: any) => {
+      // console.log(item)
+      // router.push('/product/' + value.id)
+      router.push({
+        name: 'Product',
+        params: {
+          product_id: item.id
+        }
+      })
+      // console.log(route.params)
+    }
+    const toProduct_N = (value: string) => {
+      router.push({
+        name: 'Product',
+        params: {
+          product_id: value
+        }
+      })
+    }
+    return {
+      recommend_show_4,
+      recommend_show_3,
+      ShowTopItems,
+      toProduct,
+      toProduct_N
+    }
+  }
+})
+</script>
+<style lang="scss" scoped>
+.container {
+  margin-top: 18px;
+  margin-bottom: 32px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .items {
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    // border: 1px solid black;
+    @media (min-width: 1299px) {
+      .item {
+        width: 17%;
+      }
+    }
+    @media (max-width: 1298px) {
+      .item {
+        width: 22%;
+      }
+    }
+    @media (max-width: 1029px) {
+      .item {
+        width: 28%;
+      }
+    }
+    @media (max-width: 807px) {
+      .item {
+        width: 40%;
+      }
+    }
+    @media (max-width: 605px) {
+      .item {
+        width: 45%;
+      }
+    }
+    .item {
+      height: 330px;
+      border: 1px dotted rgba(128, 125, 125, 0.3);
+      display: flex;
+      justify-content: center;
+      padding: 4px 0;
+      position: relative;
+      // background: pink;
+      &:hover {
+        background: rgba(184, 184, 184, 0.4);
+        transition: background 0.1s ease-in;
+      }
+      a {
+        display: block;
+        text-decoration: underline;
+        &:hover {
+          cursor: pointer;
+        }
+        .img-box {
+          width: 190px;
+          height: 220px;
+          margin-top: 8px;
+          margin-left: 7px;
+          padding: 8px;
+          .img-con {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: block;
+            border-radius: 2px;
+            img {
+              max-width: 100%;
+              height: auto;
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              object-fit: cover;
+              border-radius: 1px;
+            }
+          }
+        }
+        .name {
+          width: 190px;
+          height: 25px;
+          font-family: 'NotoSansJP-B';
+          text-decoration: none;
+          margin-top: 10px;
+          margin-left: 10px;
+          padding-left: 8px;
+          color: black;
+
+          p {
+            display: inline;
+            font-size: 13px;
+            // background: white;
+            line-height: 1.5;
+            color: black;
+          }
+        }
+        .type {
+          width: 190px;
+          margin-left: 10px;
+          padding-left: 8px;
+          p {
+            display: inline;
+            font-size: 13px;
+            // background: rgb(255, 175, 175);
+            line-height: 1.5;
+            color: black;
+          }
+        }
+        .price {
+          width: 190px;
+          // background: rgb(83, 106, 212);
+          text-decoration: none;
+          font-family: 'NotoSansJP-B';
+          margin-left: 10px;
+          padding-left: 8px;
+          p {
+            display: inline;
+            font-size: 13px;
+            line-height: 2;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+</style>

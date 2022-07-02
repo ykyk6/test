@@ -36,12 +36,12 @@ export default defineComponent({
   width: 100%;
   display: flex;
   justify-content: center;
-  @media (min-width: 501px) {
+  @media (min-width: 595px) {
     .container {
       display: flex;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 594px) {
     .container {
       display: flex;
       flex-direction: column;
@@ -73,12 +73,12 @@ export default defineComponent({
         }
       }
       .right {
-        .img {
-          background-position: 0px -30px;
-        }
         .img-box {
           padding-left: 5px;
           .img-con {
+            .img {
+              background-position: 0px -30px;
+            }
             &::after {
               width: 180px;
               height: 270px;
@@ -130,13 +130,14 @@ export default defineComponent({
 
     @media (max-width: 594px) {
       .left {
-        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 22px;
         margin-right: -40px;
         .img-box {
-          .img {
-            background-position: -76px 0px;
-          }
           .img-con {
+            .img {
+              background-position: -76px 0px;
+            }
             &::after {
               font-size: 37px;
               width: 100%;
@@ -151,11 +152,11 @@ export default defineComponent({
         margin-bottom: 40px;
         margin-left: -40px;
         .img-box {
-          .img {
-            background-position: 0px 0px;
-          }
           padding-left: 0px;
           .img-con {
+            .img {
+              background-position: 0px 0px;
+            }
             &::after {
               font-size: 37px;
               width: 100%;

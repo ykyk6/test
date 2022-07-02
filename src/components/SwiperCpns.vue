@@ -144,9 +144,19 @@ export default defineComponent({
 .swiper {
   width: 1100px;
 }
+@media (min-width: 595px) {
+  .slide {
+    max-width: 255px;
+  }
+}
+@media (max-width: 594px) {
+  .slide {
+    max-width: 210px;
+  }
+}
 .slide {
   width: 100%;
-  max-width: 255px;
+  // max-width: 255px;
   display: inline-block;
   border: 1px solid #9c893b;
   .slide-1,
@@ -183,6 +193,16 @@ export default defineComponent({
             object-position: 0px -27px;
             transition-duration: 0.3s;
           }
+          @media (min-width: 595px) {
+            .toShopping {
+              line-height: 250px;
+            }
+          }
+          @media (max-width: 594px) {
+            .toShopping {
+              line-height: 210px;
+            }
+          }
           .toShopping {
             width: 100%;
             height: 100%;
@@ -191,7 +211,7 @@ export default defineComponent({
             top: 0;
             z-index: 30;
             font-size: 17px;
-            line-height: 250px;
+            // line-height: 250px;
             text-align: center;
             color: black;
             transition: opacity 0.2s ease;

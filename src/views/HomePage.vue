@@ -69,7 +69,7 @@ export default defineComponent({
 .swipper-corner {
   margin-top: 100px;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 110px;
   padding-left: 10px;
   display: flex;
   flex-direction: column;
@@ -82,6 +82,7 @@ export default defineComponent({
       width: 1100px;
       .title {
         font-size: 58px;
+        line-height: 70px;
         &::after {
           left: 0%;
         }
@@ -103,18 +104,16 @@ export default defineComponent({
       justify-content: center;
       .title {
         font-size: 58px;
+        line-height: 70px;
         &::after {
           left: -5%;
         }
       }
       &::after {
-        width: 165px;
-        right: 22px;
-        top: 114%;
+        opacity: 0;
       }
       &::before {
-        right: 20px;
-        top: 134%;
+        opacity: 0;
       }
     }
   }
@@ -122,14 +121,23 @@ export default defineComponent({
     .title-wrapper {
       .title {
         font-size: 48px;
+        line-height: 70px;
+      }
+      &::after {
+        opacity: 0;
+      }
+      &::before {
+        opacity: 0;
       }
     }
   }
 
-  @media (max-width: 499px) {
+  @media (max-width: 594px) {
     .title-wrapper {
       .title {
-        font-size: 38px;
+        font-size: 30px;
+        line-height: 50px;
+        font-weight: bold;
         margin-bottom: -20px;
       }
       &::after {
@@ -145,7 +153,7 @@ export default defineComponent({
     display: flex;
     position: relative;
     .title {
-      line-height: 80px;
+      // line-height: 80px;
       letter-spacing: 2px;
       padding-left: 30px;
       position: relative;

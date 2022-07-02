@@ -15,11 +15,18 @@ jobs:
       # 步驟一：複製程式碼
       - name: checkout
         # 使用的 actions/checkout 複製程式碼
-        uses: actions/checkout@main
-
-      # 步驟二：編譯及部署
-      - name: buildAndDeploy
-        uses: JamesIves/github-pages-deploy-action
+        uses: actions/checkout@v2.3.1
+      # 步驟二：編譯
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+      # 步驟三：部署
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: dist
         # 步驟設定
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

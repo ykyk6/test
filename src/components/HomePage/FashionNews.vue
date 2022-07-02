@@ -103,7 +103,7 @@
       </div>
     </div>
     <div class="more-button-wrapper">
-      <div class="more-button" data-aos="fade-up">
+      <div class="more-button" data-aos="fade-up" @click="toShopping">
         <span class="top text-common">もっと見る</span>
       </div>
     </div>
@@ -112,10 +112,17 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
   setup() {
-    return {}
+    const router = useRouter()
+    const toShopping = () => {
+      router.push('/shopping')
+    }
+    return {
+      toShopping
+    }
   }
 })
 </script>

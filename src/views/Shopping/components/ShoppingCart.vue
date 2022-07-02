@@ -78,9 +78,18 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: 595px) {
+    .content {
+      width: 1100px;
+    }
+  }
+  @media (max-width: 594px) {
+    .content {
+      width: 800px;
+    }
+  }
   .content {
-    width: 1100px;
-    // background: rgb(80, 80, 102);
+    // width: 1100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,7 +122,6 @@ export default defineComponent({
         width: 100%;
         text-align: center;
         background: #dddddd;
-        // border-bottom: 1px solid black;
       }
     }
     .cart_title {
@@ -157,7 +165,6 @@ export default defineComponent({
         }
         .right {
           width: 90%;
-          // margin-bottom: 20px;
         }
       }
     }
@@ -277,17 +284,12 @@ export default defineComponent({
 .q-field--auto-height.q-field--labeled .q-field__control-container {
   padding-top: 5px;
 }
-// .col,
-// .col-xs {
-//   flex: 0%;
-// }
+
 .quantity {
   .q-field--filled .q-field__control {
     width: 80px;
     height: 28px;
     background: white;
-    // border: 1px solid rgb(92, 92, 92);
-    // background: rgba(202, 202, 202, 0.3);
     border-radius: 3px;
   }
   .q-field__marginal {

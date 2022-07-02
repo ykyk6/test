@@ -251,14 +251,9 @@ export default defineComponent({
     }
   }
 }
-@media (max-width: 499px) {
-  .swiper {
-    min-width: 700vw;
-  }
-}
 @media (min-width: 500px) and (max-width: 550px) {
   .swiper {
-    min-width: 500vw;
+    min-width: 400vw;
   }
 }
 @media (min-width: 551px) and (max-width: 689px) {

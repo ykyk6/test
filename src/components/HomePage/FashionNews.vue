@@ -488,7 +488,7 @@ export default defineComponent({
             &::before {
               font-size: 9px;
               height: 347px;
-              left: 37px;
+              left: 32px;
             }
           }
         }

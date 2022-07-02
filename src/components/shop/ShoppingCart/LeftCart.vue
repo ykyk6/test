@@ -61,7 +61,6 @@ export default defineComponent({
     const options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     const store = useStore()
     const cartItems = ref(store.state.cartItem1)
-    // console.log(store.state.cartItem1)
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const deleteCart = (item: any) => {
@@ -93,23 +92,38 @@ export default defineComponent({
 <style lang="scss" scoped>
 .cart_wrapper {
   width: 100%;
-  // background: pink;
   display: flex;
   justify-content: center;
 }
 .item_wrapper {
   width: 95%;
   margin-top: 10px;
-  // background: rgb(107, 73, 73);
   padding: 14px 5px;
   border: 1px solid rgba(141, 141, 141, 0.5);
   border-radius: 5px;
   display: flex;
   background: rgba(255, 255, 255, 0.9);
+  @media (min-width: 595px) {
+    .img {
+      display: flex;
+      width: 20%;
+    }
+    .info {
+      width: 52%;
+    }
+  }
+  @media (max-width: 594px) {
+    .img {
+      display: none;
+      width: 0%;
+    }
+    .info {
+      width: 72%;
+    }
+  }
   .img {
-    width: 20%;
-    // background: green;
-    display: flex;
+    // width: 20%;
+    // display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -150,12 +164,10 @@ export default defineComponent({
     }
   }
   .info {
-    width: 52%;
     height: 150px;
     display: flex;
     align-items: center;
     margin-left: 20px;
-    // background: rgb(102, 184, 102);
     @media (min-width: 630px) {
       .info-wrapper {
         font-size: 16px;
@@ -163,7 +175,7 @@ export default defineComponent({
     }
     @media (max-width: 629px) {
       .info-wrapper {
-        font-size: 14px;
+        font-size: 13px;
       }
     }
     .info-wrapper {
@@ -172,14 +184,11 @@ export default defineComponent({
       flex-direction: column;
       .name {
         width: 90%;
-        // background: brown;
-        // font-size: 16px;
         border-bottom: 1px dotted black;
         padding-bottom: 4px;
         margin-bottom: 9px;
       }
       .detail {
-        // background: pink;
         width: 100%;
         display: flex;
         margin-top: 8px;
@@ -192,7 +201,6 @@ export default defineComponent({
             background: rgba(219, 219, 219, 0.6);
           }
           .color {
-            // margin-bottom: -10px;
             line-height: 2;
           }
           .quantity {
@@ -205,16 +213,13 @@ export default defineComponent({
           flex-direction: column;
           width: 70%;
           .detail-right-common {
-            // margin-bottom: 5px;
             margin-left: 10px;
           }
           .color {
-            // margin-bottom: -10px;
             line-height: 2;
           }
           .quantity {
             margin-top: 9px;
-            // line-height: 2;
           }
         }
       }
@@ -222,10 +227,7 @@ export default defineComponent({
   }
   .check_out {
     width: 28%;
-    // height: 100%;
-    // background: rgb(129, 129, 67);
     display: flex;
-    // justify-content: center;
     align-items: center;
     .chech_out-wrapper {
       width: 100%;
@@ -234,12 +236,8 @@ export default defineComponent({
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      // background: brown;
       .delete {
         width: 100%;
-        // height: 30%;
-        // background: pink;
-        // border: 1px solid rgb(136, 136, 136);
         text-align: center;
         margin-bottom: 13px;
         .del_btn {
@@ -248,7 +246,6 @@ export default defineComponent({
       }
       .calculate {
         width: 100%;
-        // height: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -257,15 +254,12 @@ export default defineComponent({
         .calculate_title {
           background: rgba(238, 238, 238, 0.5);
           width: 80%;
-          // height: 10px;
           text-align: center;
           padding: 3px 0;
-          // border: 1px solid rgb(136, 136, 136);
         }
         .calculate_price {
           background: rgb(233, 233, 233);
           width: 80%;
-          // height: 10px;
           text-align: center;
           padding: 8px 0;
           font-size: 16px;

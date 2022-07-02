@@ -40,4 +40,4 @@ jobs:
           BUILD_SCRIPT: npm install && npm run build
           # 動作完成後清除檔案
           CLEAN: true
-          VUE_APP_API: https://collection01.herokuapp.com/
+          VUE_APP_API: ${{ secrets.VUE_APP_API }}

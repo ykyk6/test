@@ -12,10 +12,7 @@ module.exports = defineConfig({
   //     }
   //   }
   // },
-  devServer: {
-    compress: true,
-    disableHostCheck: true
-  },
+  publicPath: './',
   pluginOptions: {
     quasar: {
       importStrategy: 'kebab',

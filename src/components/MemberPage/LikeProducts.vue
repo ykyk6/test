@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="like-container">
     <div class="content">
       <div class="like-breadcrumbs">
         <q-breadcrumbs class="text-black">
@@ -147,7 +147,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import '@/styles/common.css';
-.container {
+.like-container {
   font-family: 'NotoSansJP-R';
   width: 100%;
   display: flex;

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="order-container">
     <div class="content">
       <div class="order-breadcrumbs">
         <q-breadcrumbs class="text-black">
@@ -268,7 +268,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import '@/styles/common.css';
-.container {
+.order-container {
   width: 100%;
   font-family: 'NotoSansJP-R';
   display: flex;

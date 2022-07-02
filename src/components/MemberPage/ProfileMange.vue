@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="profile-container">
     <div class="contain">
       <div class="profiledata_wrapper">
         <q-form method="post" @submit.prevent="onSubmit">
@@ -143,7 +143,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.container {
+.profile-container {
   width: 100%;
   // background: orange;
   display: flex;

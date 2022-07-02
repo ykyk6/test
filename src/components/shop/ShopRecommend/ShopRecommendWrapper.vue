@@ -145,34 +145,34 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   margin: auto;
-  // background: rgba(182, 171, 150, 0.5);
   .title {
     margin-top: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
     width: 270px;
     text-align: center;
     margin-bottom: 33px;
     position: relative;
     &::before {
-      content: '';
-      background-image: url('@/assets/icon/text_border-9.svg');
-      width: 290px;
-      height: 86px;
+      content: '— おすすめ品 — ';
+      width: 100%;
+      font-size: 16px;
+      letter-spacing: 2px;
+      color: grey;
       position: absolute;
-      left: -13px;
-      top: -17px;
-      z-index: -1;
+      left: 50%;
+      top: 75%;
+      transform: translate(-55%, 0);
     }
     p {
-      font-size: 32px;
+      font-size: 37px;
     }
   }
   .q-card {
     box-shadow: none;
     border-radius: 0px;
     vertical-align: top;
-    // background: rgb(248, 238, 238);
     position: relative;
-    // border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,20 +181,12 @@ export default defineComponent({
     width: 81%;
     min-height: 45px;
     min-width: none;
-    // border-top: 1px dotted black;
-    // border-bottom: 1px dotted black;
-    // border-left: 1px dotted black;
-    // border: 1px dotted black;
   }
   .q-tab {
-    // background: pink;
-    // border-right: 1px dotted black;
-    // border: 1px dotted grey;
     color: black;
     background: rgba(184, 184, 184, 0.3);
     border-radius: 5px 5px 0 0;
     margin-right: 4px;
-    // border-top: 1px dotted #818181;
     &--active {
       background: rgba(141, 141, 141, 0.4);
     }
@@ -203,7 +195,6 @@ export default defineComponent({
   .recommend-control {
     width: 100%;
     height: 60px;
-    // background: grey;
     margin-top: 15px;
     text-align: center;
     .page {

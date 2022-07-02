@@ -134,24 +134,31 @@ export default defineComponent({
     text-align: center;
     margin-top: 25px;
     position: relative;
+    font-weight: bold;
+    letter-spacing: 1px;
     &::before {
-      content: '';
-      background-image: url('@/assets/icon/text_border-8.svg');
-      width: 295px;
-      height: 97px;
+      content: '— 新入荷アイテム — ';
+      width: 100%;
+      font-size: 16px;
+      letter-spacing: 2px;
+      color: grey;
       position: absolute;
-      left: -28px;
-      top: -20px;
-      z-index: -1;
+      left: 50%;
+      top: 75%;
+      transform: translate(-53%, 0);
     }
     p {
-      font-size: 32px;
+      font-size: 37px;
     }
   }
   @media (min-width: 1295px) {
     .container-wrapper {
       width: 83%;
       display: flex;
+      .arrival_left {
+        width: 450px;
+        border: 1px solid rgb(46, 46, 46);
+      }
       .arrival_left {
         width: 36%;
         height: 645px;
@@ -188,6 +195,10 @@ export default defineComponent({
     .container-wrapper {
       width: 93%;
       display: flex;
+      .arrival_left {
+        width: 450px;
+        border: 1px solid rgb(46, 46, 46);
+      }
       .arrival_left {
         width: 36%;
         height: 645px;
@@ -311,23 +322,16 @@ export default defineComponent({
 
   @media (max-width: 689px) {
     .container-wrapper {
-      .arrival_left {
-        width: 450px;
-      }
-    }
-  }
-  @media (max-width: 650px) {
-    .container-wrapper {
-      .arrival_left {
-        width: 420px;
-      }
     }
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 594px) {
     .container-wrapper {
       .arrival_left {
         width: 420px;
+        border: 0px solid rgb(46, 46, 46);
+        margin-top: -30px;
+        margin-bottom: -15px;
       }
     }
   }
@@ -337,7 +341,7 @@ export default defineComponent({
 
     .arrival_left {
       background: rgba(187, 187, 187, 0);
-      border: 1px solid rgb(46, 46, 46);
+      // border: 1px solid rgb(46, 46, 46);
       display: flex;
       .left-container {
         width: 100%;
@@ -346,14 +350,6 @@ export default defineComponent({
         flex-direction: column;
         align-items: center;
         position: relative;
-        // &::after {
-        //   content: 'NEW';
-        //   width: 200px;
-        //   height: 100px;
-        //   position: absolute;
-        //   left: 0;
-        //   top: 0;
-        // }
 
         .text-box {
           margin-top: 5px;

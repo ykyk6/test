@@ -176,18 +176,21 @@ export default defineComponent({
     text-align: center;
     margin-bottom: -30px;
     position: relative;
-    // background: pink;
+    font-weight: bold;
+    letter-spacing: 1px;
     &::before {
-      content: '';
-      background-image: url('@/assets/icon/text_border-6.svg');
-      width: 221px;
-      height: 87px;
+      content: '— ランキング — ';
+      width: 100%;
+      font-size: 16px;
+      letter-spacing: 2px;
+      color: grey;
       position: absolute;
-      left: 14px;
-      top: -15px;
+      left: 50%;
+      top: 75%;
+      transform: translate(-52%, 0);
     }
     p {
-      font-size: 32px;
+      font-size: 37px;
     }
   }
 

@@ -179,7 +179,8 @@ export default defineComponent({
       }
     }
     .shop-recommend {
-      margin-top: 70px;
+      margin-top: 50px;
+      margin-bottom: 10px;
     }
   }
 }

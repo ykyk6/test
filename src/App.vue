@@ -586,8 +586,8 @@ export default defineComponent({
   }
 }
 .small-img-con {
-  width: 319px;
-  height: 56px;
+  width: 265px;
+  height: 50px;
   margin-bottom: -8px;
   margin-left: 40px;
   img {

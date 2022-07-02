@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="checkout-container">
     <div class="contain">
       <div class="order_check_title">ご注文内容の確認</div>
       <div class="order_check_list">
@@ -517,8 +517,7 @@ export default defineComponent({
 
 <style lang="scss" scope>
 @import '@/styles/common.css';
-.container {
-  // width: 100%;
+.checkout-container {
   font-family: 'NotoSansJP-R';
   display: flex;
   flex-direction: column;

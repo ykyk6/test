@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="OCD-container">
       <div class="contain">
         <div><span class="material-icons"> check_circle </span></div>
         <div class="title">注文完了</div>
@@ -65,7 +65,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import '@/styles/common.css';
-.container {
+.OCD-container {
   font-family: 'NotoSansJP-R';
   display: flex;
   flex-direction: column;

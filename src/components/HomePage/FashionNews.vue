@@ -20,7 +20,9 @@
         </div>
         <div class="right-wrapper">
           <div class="title" data-aos="fade-up" data-aos-delay="100">
-            <h4>「着用感のない」<br />軽くて涼しい脱力ジャケット</h4>
+            <div class="title-text">
+              「着用感のない」<br />軽くて涼しい脱力ジャケット
+            </div>
           </div>
           <div class="text" data-aos="fade-up" data-aos-delay="300">
             <p>
@@ -42,10 +44,10 @@
         </div>
         <div class="left-wrapper">
           <div class="title" data-aos="fade-up" data-aos-delay="300">
-            <h4>
+            <div class="title-text">
               【明日なに着る？】<br />
               カジュアルなミニワンピ感覚「ショートパンツのニットアップ」
-            </h4>
+            </div>
           </div>
           <div class="text" data-aos="fade-up" data-aos-delay="500">
             <p>
@@ -186,8 +188,23 @@ export default defineComponent({
         width: 560px;
         align-items: flex-end;
         .decorate-title {
-          width: 73%;
-          margin-right: 52px;
+          width: 80%;
+          font-size: 62px;
+          line-height: 79px;
+          &::after {
+            font-size: 62px;
+          }
+        }
+        .right-wrapper {
+          .title {
+            .title-text {
+              font-size: 30px;
+              font-weight: bold;
+              text-align: center;
+              line-height: 51px;
+              margin: 15px;
+            }
+          }
         }
       }
     }
@@ -199,7 +216,23 @@ export default defineComponent({
       .left {
         width: 620px;
         .decorate-title {
-          width: 68%;
+          width: 80%;
+          font-size: 62px;
+          line-height: 79px;
+          &::after {
+            font-size: 62px;
+          }
+        }
+        .left-wrapper {
+          .title {
+            .title-text {
+              font-size: 30px;
+              font-weight: bold;
+              text-align: center;
+              line-height: 51px;
+              margin: 15px;
+            }
+          }
         }
       }
       .right {
@@ -231,8 +264,10 @@ export default defineComponent({
       .decorate-title {
         width: 100%;
         line-height: 101px;
+        font-size: 70px;
         &::after {
           content: 'FASHION NEWS 03';
+          font-size: 70px;
           transform: scaleX(-1) rotate(180deg);
         }
       }
@@ -294,12 +329,28 @@ export default defineComponent({
         align-items: center;
         .decorate-title {
           width: 80%;
+          font-size: 59px;
+          line-height: 79px;
+          &::after {
+            font-size: 59px;
+          }
+        }
+        .right-wrapper {
+          .title {
+            .title-text {
+              font-size: 30px;
+              font-weight: bold;
+              text-align: center;
+              line-height: 51px;
+              margin: 15px;
+            }
+          }
         }
       }
     }
     .middle {
       width: 100%;
-      margin-top: 50px;
+      // margin-top: 50px;
       display: flex;
       flex-direction: column-reverse;
       .left {
@@ -307,6 +358,22 @@ export default defineComponent({
         width: 100;
         .decorate-title {
           width: 80%;
+          font-size: 59px;
+          line-height: 79px;
+          &::after {
+            font-size: 59px;
+          }
+        }
+        .left-wrapper {
+          .title {
+            .title-text {
+              font-size: 30px;
+              font-weight: bold;
+              text-align: center;
+              line-height: 51px;
+              margin: 15px;
+            }
+          }
         }
       }
       .right {
@@ -346,10 +413,12 @@ export default defineComponent({
         opacity: 0;
       }
       .decorate-title {
+        font-size: 70px;
         line-height: 90px;
         width: 100%;
         &::after {
           content: 'FASHION NEWS 03';
+          font-size: 70px;
           transform: scaleY(-1) rotateY(0deg);
         }
       }
@@ -397,6 +466,123 @@ export default defineComponent({
       }
     }
   }
+
+  @media (max-width: 594px) {
+    .top {
+      .left {
+        .img-box {
+          padding: 15px 15px;
+          &::after {
+            right: -3px;
+            bottom: 71px;
+            width: 147px;
+            height: 160px;
+          }
+          .img-con {
+            width: 288px;
+            height: 413px;
+            &::after {
+              font-size: 9px;
+              left: 8px;
+            }
+            &::before {
+              font-size: 9px;
+              height: 347px;
+              left: 37px;
+            }
+          }
+        }
+      }
+      .right {
+        margin-top: 72px;
+        width: 100%;
+        align-items: center;
+        .decorate-title {
+          font-size: 30px;
+          line-height: 60px;
+          width: 80%;
+          &::after {
+            font-size: 30px;
+          }
+        }
+        .right-wrapper {
+          .title {
+            .title-text {
+              font-size: 26px;
+              font-weight: bold;
+              text-align: center;
+              line-height: 43px;
+              margin: 15px;
+            }
+          }
+        }
+      }
+    }
+    .middle {
+      .left {
+        margin-top: 72px;
+        width: 100%;
+        .decorate-title {
+          width: 80%;
+          font-size: 30px;
+          line-height: 60px;
+          &::after {
+            font-size: 30px;
+          }
+        }
+        .left-wrapper {
+          .title {
+            .title-text {
+              font-size: 26px;
+              font-weight: bold;
+              text-align: center;
+              line-height: 43px;
+              margin: 15px;
+            }
+          }
+        }
+      }
+      .right {
+        margin-top: 50px;
+        width: 100%;
+        .img-box {
+          padding: 15px 15px;
+          .img-con {
+            width: 288px;
+            height: 413px;
+            &::after {
+              right: 10%;
+              bottom: 108%;
+              width: 239px;
+              height: 93px;
+            }
+          }
+          &::after {
+            right: -28px;
+            bottom: 41px;
+            width: 160px;
+            height: 196px;
+          }
+        }
+      }
+      &::after {
+        opacity: 0;
+      }
+    }
+    .bottom {
+      margin-top: 16px;
+      .decorate-title {
+        line-height: 65px;
+        font-size: 53px;
+        &::after {
+          opacity: 0;
+        }
+      }
+      .title {
+        margin-top: 15px;
+      }
+    }
+  }
   // fashion-news-title
   @media (min-width: 807px) {
     .title-wrapper {
@@ -409,6 +595,15 @@ export default defineComponent({
     .title-wrapper {
       .fashion-news-title {
         font-size: 48px;
+      }
+    }
+  }
+  @media (max-width: 594px) {
+    .title-wrapper {
+      .fashion-news-title {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 50px;
       }
     }
   }
@@ -506,17 +701,17 @@ export default defineComponent({
       display: flex;
       flex-direction: column;
       .decorate-title {
-        font-size: 66px;
+        // font-size: 66px;
         -webkit-text-stroke: 1px #aa7229;
         color: white;
         border: 2px dotted #8a5a1c;
         text-align: center;
-        line-height: 93px;
+        // line-height: 93px;
         position: relative;
         &::after {
           content: 'FASHION NEWS 01';
           width: 100%;
-          font-size: 66px;
+          // font-size: 66px;
           -webkit-text-stroke: 1px transparent;
           color: rgba(228, 228, 228, 0.5);
           position: absolute;
@@ -567,18 +762,15 @@ export default defineComponent({
       align-items: center;
       .decorate-title {
         margin-left: 15px;
-        font-size: 66px;
         -webkit-text-stroke: 1px #00659f;
         color: white;
         border: 2px dotted #136ca0;
         margin-right: 15px;
-        line-height: 93px;
         position: relative;
         text-align: center;
         &::after {
           content: 'FASHION NEWS 02';
           width: 100%;
-          font-size: 66px;
           -webkit-text-stroke: 1px transparent;
           color: rgba(228, 228, 228, 0.5);
           position: absolute;
@@ -590,15 +782,6 @@ export default defineComponent({
       .left-wrapper {
         width: 91%;
         padding: 5px 25px;
-        .title {
-          h4 {
-            margin-top: 30px;
-            margin-bottom: 20px;
-            text-align: center;
-            font-weight: bold;
-            line-height: 50px;
-          }
-        }
         .text {
           p {
             font-size: 16px;
@@ -674,7 +857,7 @@ export default defineComponent({
     align-items: center;
     position: relative;
     .decorate-title {
-      font-size: 70px;
+      // font-size: 70px;
       -webkit-text-stroke: 1px #000000;
       color: white;
       position: relative;
@@ -682,7 +865,7 @@ export default defineComponent({
       &::after {
         // content: 'FASHION NEWS 03';
         width: 100%;
-        font-size: 70px;
+        // font-size: 70px;
         -webkit-text-stroke: 1px transparent;
         color: rgba(228, 228, 228, 0.5);
         position: absolute;

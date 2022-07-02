@@ -65,7 +65,7 @@ export default defineComponent({
     }
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 594px) {
   .homepage-about {
     .container {
       .right {
@@ -73,7 +73,7 @@ export default defineComponent({
           width: 92%;
           font-size: 30px;
           line-height: 47px;
-          // letter-spacing: 1px;
+          font-weight: bold;
         }
       }
     }

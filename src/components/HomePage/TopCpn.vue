@@ -110,6 +110,10 @@ export default defineComponent({
               background: url('@/assets/icon/homepage-top-1.jpg');
               background-position: 10px 560px;
               background-size: cover;
+              .homepage-title {
+                width: 90%;
+                font-size: 69px;
+              }
             }
           }
         }
@@ -159,8 +163,11 @@ export default defineComponent({
           .img-box {
             .img-con {
               background: url('@/assets/icon/homepage-top-1.jpg');
-              background-position: 10px 490px;
+              background-position: 10px 560px;
               background-size: cover;
+              .homepage-title {
+                font-size: 60px;
+              }
             }
           }
         }
@@ -196,6 +203,23 @@ export default defineComponent({
       }
     }
   }
+
+  @media (max-width: 594px) {
+    .container-1 {
+      .left {
+        .top {
+          .img-box {
+            .img-con {
+              background-position: 10px 405px;
+              .homepage-title {
+                font-size: 53px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .container-1 {
     .left {
       display: flex;
@@ -215,7 +239,7 @@ export default defineComponent({
             align-items: center;
             .homepage-title {
               width: 90%;
-              font-size: 69px;
+              // font-size: 69px;
               color: #e9e9e929;
               -webkit-text-stroke: 1px #bd904c;
               letter-spacing: 4px;

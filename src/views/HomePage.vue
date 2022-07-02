@@ -125,6 +125,21 @@ export default defineComponent({
       }
     }
   }
+
+  @media (max-width: 499px) {
+    .title-wrapper {
+      .title {
+        font-size: 38px;
+        margin-bottom: -20px;
+      }
+      &::after {
+        opacity: 0;
+      }
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
   .title-wrapper {
     margin-bottom: 70px;
     display: flex;

@@ -36,11 +36,24 @@ export default defineComponent({
   width: 100%;
   display: flex;
   justify-content: center;
+  @media (min-width: 501px) {
+    .container {
+      display: flex;
+    }
+  }
+  @media (max-width: 500px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
   .container {
     width: 1100px;
-    display: flex;
+    // display: flex;
     @media (min-width: 896px) {
       .left {
+        margin-top: 50px;
         .img-box {
           .img-con {
             &::after {
@@ -58,6 +71,7 @@ export default defineComponent({
       }
       .right {
         .img-box {
+          padding-left: 5px;
           .img-con {
             &::after {
               width: 180px;
@@ -73,6 +87,7 @@ export default defineComponent({
     }
     @media (max-width: 895px) {
       .left {
+        margin-top: 50px;
         .img-box {
           .img-con {
             &::after {
@@ -87,6 +102,39 @@ export default defineComponent({
       }
       .right {
         .img-box {
+          padding-left: 5px;
+          .img-con {
+            &::after {
+              font-size: 37px;
+              width: 100%;
+              text-align: left;
+              left: 3%;
+              bottom: -22%;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 500px) {
+      .left {
+        margin-bottom: 20px;
+        .img-box {
+          .img-con {
+            &::after {
+              font-size: 37px;
+              width: 100%;
+              text-align: right;
+              left: 0%;
+              top: -21%;
+            }
+          }
+        }
+      }
+      .right {
+        margin-bottom: 40px;
+        .img-box {
+          padding-left: 0px;
           .img-con {
             &::after {
               font-size: 37px;
@@ -103,7 +151,7 @@ export default defineComponent({
       width: 50%;
       display: flex;
       justify-content: flex-end;
-      margin-top: 50px;
+      // margin-top: 50px;
       .img-box {
         width: 350px;
         height: 260px;
@@ -133,7 +181,7 @@ export default defineComponent({
       .img-box {
         width: 350px;
         height: 260px;
-        padding-left: 5px;
+        // padding-left: 5px;
         position: relative;
         .img-con {
           width: 100%;

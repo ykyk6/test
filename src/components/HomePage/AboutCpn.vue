@@ -65,6 +65,20 @@ export default defineComponent({
     }
   }
 }
+@media (max-width: 360px) {
+  .homepage-about {
+    .container {
+      .right {
+        .title {
+          width: 92%;
+          font-size: 30px;
+          line-height: 47px;
+          // letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
 .homepage-about {
   width: 100%;
   display: flex;

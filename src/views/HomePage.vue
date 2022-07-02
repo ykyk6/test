@@ -139,6 +139,9 @@ export default defineComponent({
         line-height: 50px;
         font-weight: bold;
         margin-bottom: -20px;
+        &::after {
+          font-weight: normal;
+        }
       }
       &::after {
         opacity: 0;

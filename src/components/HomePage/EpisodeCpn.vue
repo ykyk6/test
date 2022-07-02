@@ -56,6 +56,9 @@ export default defineComponent({
         margin-top: 50px;
         .img-box {
           .img-con {
+            .img {
+              background-position: 0px -1px;
+            }
             &::after {
               width: 180px;
               height: 270px;
@@ -70,6 +73,9 @@ export default defineComponent({
         }
       }
       .right {
+        .img {
+          background-position: 0px -30px;
+        }
         .img-box {
           padding-left: 5px;
           .img-con {
@@ -90,6 +96,9 @@ export default defineComponent({
         margin-top: 50px;
         .img-box {
           .img-con {
+            .img {
+              background-position: 0px -1px;
+            }
             &::after {
               font-size: 37px;
               width: 100%;
@@ -104,6 +113,9 @@ export default defineComponent({
         .img-box {
           padding-left: 5px;
           .img-con {
+            .img {
+              background-position: 0px -30px;
+            }
             &::after {
               font-size: 37px;
               width: 100%;
@@ -116,10 +128,14 @@ export default defineComponent({
       }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 594px) {
       .left {
         margin-bottom: 20px;
+        margin-right: -40px;
         .img-box {
+          .img {
+            background-position: -76px 0px;
+          }
           .img-con {
             &::after {
               font-size: 37px;
@@ -133,7 +149,11 @@ export default defineComponent({
       }
       .right {
         margin-bottom: 40px;
+        margin-left: -40px;
         .img-box {
+          .img {
+            background-position: 0px 0px;
+          }
           padding-left: 0px;
           .img-con {
             &::after {
@@ -165,7 +185,7 @@ export default defineComponent({
             height: 100%;
             background-image: url('@/assets/icon/homepage-episode-1.jpg');
             background-size: cover;
-            background-position: 0px -1px;
+            // background-position: 0px -1px;
           }
           &::after {
             content: 'ABOUT';
@@ -191,7 +211,7 @@ export default defineComponent({
             height: 100%;
             background-image: url('@/assets/icon/homepage-episode-2.jpg');
             background-size: cover;
-            background-position: 0px -30px;
+            // background-position: 0px -30px;
           }
           &::after {
             content: 'FASHION';

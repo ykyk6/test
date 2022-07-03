@@ -2,15 +2,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import HomePage from '../views/HomePage.vue'
 
-
-// function toLikeProducts(to, from, next) {
-//   const user_mail = sessionStorage.getItem('userinfo')
-//   if (!user_mail) {
-//     next({ name: 'Login' })
-//   } else {
-//     next()
-//   }
-// }
 const routes: Array<RouteRecordRaw> = [
     {
       path: "/",
@@ -71,14 +62,6 @@ const routes: Array<RouteRecordRaw> = [
       name: 'LikeProducts',
       component: () =>
       import(/* webpackChunkName: "checkout" */'@/components/MemberPage/LikeProducts.vue')
-      // beforeEnter: (to, from, next) => {
-      //   const user_mail = sessionStorage.getItem('userinfo')
-      //   if (!user_mail) {
-      //     next({ name: 'Login' })
-      //   } else {
-      //      next()
-      //     }
-      //  }
     },
     {
       path: '/orderHistory',
@@ -88,9 +71,18 @@ const routes: Array<RouteRecordRaw> = [
     }
 ]
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const scrollBehavior =  (to: any, from: any, savedPosition: any) => {
+  if( savedPosition && to.meta.keepAlive ) {
+    return savedPosition
+  }
+  return { left:0, top:0 }
+}
+
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
+  scrollBehavior
 })
 
 export default router

@@ -142,11 +142,39 @@ export default defineComponent({
     @media (min-width: 1299px) {
       .item {
         width: 17%;
+        height: 330px;
+        .img-box {
+          width: 190px;
+          height: 220px;
+          margin-left: 7px;
+        }
+        .name,
+        .type,
+        .price {
+          width: 190px;
+        }
+        .name {
+          height: 25px;
+        }
       }
     }
     @media (max-width: 1298px) {
       .item {
         width: 22%;
+        height: 330px;
+        .img-box {
+          width: 190px;
+          height: 220px;
+          margin-left: 7px;
+        }
+        .name,
+        .type,
+        .price {
+          width: 190px;
+        }
+        .name {
+          height: 25px;
+        }
       }
     }
     @media (max-width: 1029px) {
@@ -164,14 +192,34 @@ export default defineComponent({
         width: 45%;
       }
     }
+    @media (max-width: 594px) {
+      .item {
+        width: 37%;
+        height: 315px;
+        a {
+          .img-box {
+            width: 160px;
+            height: 189px;
+            margin-left: 5px;
+          }
+          .name,
+          .type,
+          .price {
+            width: 160px;
+          }
+          .name {
+            height: auto;
+          }
+        }
+      }
+    }
     .item {
-      height: 330px;
+      // height: 330px;
       border: 1px dotted rgba(128, 125, 125, 0.3);
       display: flex;
       justify-content: center;
       padding: 4px 0;
       position: relative;
-      // background: pink;
       &:hover {
         background: rgba(184, 184, 184, 0.4);
         transition: background 0.1s ease-in;
@@ -183,10 +231,10 @@ export default defineComponent({
           cursor: pointer;
         }
         .img-box {
-          width: 190px;
-          height: 220px;
+          // width: 190px;
+          // height: 220px;
           margin-top: 8px;
-          margin-left: 7px;
+          // margin-left: 7px;
           padding: 8px;
           .img-con {
             width: 100%;
@@ -208,8 +256,8 @@ export default defineComponent({
           }
         }
         .name {
-          width: 190px;
-          height: 25px;
+          // width: 190px;
+          // height: 25px;
           font-family: 'NotoSansJP-B';
           text-decoration: none;
           margin-top: 10px;
@@ -226,20 +274,18 @@ export default defineComponent({
           }
         }
         .type {
-          width: 190px;
+          // width: 190px;
           margin-left: 10px;
           padding-left: 8px;
           p {
             display: inline;
             font-size: 13px;
-            // background: rgb(255, 175, 175);
             line-height: 1.5;
             color: black;
           }
         }
         .price {
-          width: 190px;
-          // background: rgb(83, 106, 212);
+          // width: 190px;
           text-decoration: none;
           font-family: 'NotoSansJP-B';
           margin-left: 10px;

@@ -9,11 +9,9 @@
       :thumbs="{ swiper: thumbsSwiper }"
     >
       <swiper-slide class="item" v-for="img in imgs" :key="img.pic">
-        <!-- <img :src="`/images/example/${index}.jpg`" /> -->
         <div class="img-box">
           <div class="img-con">
             <img :src="img.pic" alt="" />
-            <!-- {{ img }} -->
           </div>
         </div>
       </swiper-slide>
@@ -70,14 +68,49 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.top-swiper {
-  width: 490px;
+@media (min-width: 595px) {
+  .top-swiper {
+    width: 490px;
+  }
+  .img-box {
+    width: 488px;
+    height: 590px;
+  }
+  .thumbs-swiper {
+    width: 472px;
+  }
+  .small-img {
+    .small-img-box {
+      width: 63px;
+      height: 76px;
+    }
+  }
 }
+@media (max-width: 594px) {
+  .top-swiper {
+    width: 370px;
+  }
+  .img-box {
+    width: 370px;
+    height: 506px;
+  }
+  .thumbs-swiper {
+    width: 370px;
+  }
+  .small-img {
+    padding-left: 7px;
+    .small-img-box {
+      width: 52px;
+      height: 63px;
+    }
+  }
+}
+// .top-swiper {
+//   width: 490px;
+// }
 .img-box {
-  width: 488px;
-  height: 590px;
-  // border: 1px solid #cdbfbf;
-  // border: 1px solid rgb(0, 0, 0);
+  // width: 488px;
+  // height: 590px;
   .img-con {
     width: 100%;
     height: 100%;
@@ -93,7 +126,7 @@ export default defineComponent({
   }
 }
 .thumbs-swiper {
-  width: 472px;
+  // width: 472px;
   height: 160px;
   // background: yellow;
 }
@@ -105,8 +138,8 @@ export default defineComponent({
   .small-img-box {
     margin-top: 20px;
     margin-right: 15px;
-    width: 63px;
-    height: 76px;
+    // width: 63px;
+    // height: 76px;
     border: 1px solid #cdbfbf;
     .small-img-con {
       width: 100%;

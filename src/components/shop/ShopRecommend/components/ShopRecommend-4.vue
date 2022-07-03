@@ -133,18 +133,46 @@ export default defineComponent({
   align-items: center;
   .items {
     width: 98%;
-    // background: rgb(173, 173, 173);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    // border: 1px solid black;
     @media (min-width: 1299px) {
       .item {
         width: 17%;
+        height: 330px;
+        .img-box {
+          width: 190px;
+          height: 220px;
+          margin-left: 7px;
+        }
+        .name,
+        .type,
+        .price {
+          width: 190px;
+        }
+        .name {
+          height: 25px;
+        }
       }
     }
     @media (max-width: 1298px) {
       .item {
-        width: 21%;
+        width: 22%;
+        height: 330px;
+        .img-box {
+          width: 190px;
+          height: 220px;
+          margin-left: 7px;
+        }
+        .name,
+        .type,
+        .price {
+          width: 190px;
+        }
+        .name {
+          height: 25px;
+        }
       }
     }
     @media (max-width: 1029px) {
@@ -162,9 +190,29 @@ export default defineComponent({
         width: 45%;
       }
     }
+    @media (max-width: 594px) {
+      .item {
+        width: 37%;
+        height: 315px;
+        a {
+          .img-box {
+            width: 160px;
+            height: 189px;
+            margin-left: 5px;
+          }
+          .name,
+          .type,
+          .price {
+            width: 160px;
+          }
+          .name {
+            height: auto;
+          }
+        }
+      }
+    }
     .item {
-      height: 330px;
-      // background: rgba(226, 226, 226, 0.2);
+      // height: 330px;
       border: 1px dotted rgba(128, 125, 125, 0.3);
       display: flex;
       justify-content: center;
@@ -173,19 +221,18 @@ export default defineComponent({
       &:hover {
         background: rgba(184, 184, 184, 0.4);
         transition: background 0.1s ease-in;
-        cursor: pointer;
       }
       a {
-        text-decoration: underline;
         display: block;
+        text-decoration: underline;
         &:hover {
           cursor: pointer;
         }
         .img-box {
-          width: 190px;
-          height: 220px;
+          // width: 190px;
+          // height: 220px;
           margin-top: 8px;
-          margin-left: 7px;
+          // margin-left: 7px;
           padding: 8px;
           .img-con {
             width: 100%;
@@ -207,8 +254,8 @@ export default defineComponent({
           }
         }
         .name {
-          width: 190px;
-          height: 25px;
+          // width: 190px;
+          // height: 25px;
           font-family: 'NotoSansJP-B';
           text-decoration: none;
           margin-top: 10px;
@@ -219,24 +266,24 @@ export default defineComponent({
           p {
             display: inline;
             font-size: 13px;
+            // background: white;
             line-height: 1.5;
             color: black;
           }
         }
         .type {
-          width: 190px;
+          // width: 190px;
           margin-left: 10px;
           padding-left: 8px;
           p {
             display: inline;
             font-size: 13px;
-            // background: rgb(255, 175, 175);
             line-height: 1.5;
             color: black;
           }
         }
         .price {
-          width: 190px;
+          // width: 190px;
           text-decoration: none;
           font-family: 'NotoSansJP-B';
           margin-left: 10px;
@@ -247,69 +294,6 @@ export default defineComponent({
             line-height: 2;
             color: black;
           }
-        }
-      }
-    }
-  }
-  .more_items {
-    margin-top: 35px;
-    width: 98%;
-    display: flex;
-    justify-content: center;
-    a {
-      .icon {
-        width: 150px;
-        height: 40px;
-        border: 1px solid rgb(0, 0, 0);
-        position: relative;
-        padding: 10px 20px;
-        box-sizing: border-box;
-        &::after,
-        &::before {
-          content: '';
-          box-sizing: inherit;
-          position: absolute;
-          border: 1px solid transparent;
-          width: 0;
-          height: 0;
-        }
-        &::after {
-          bottom: 0;
-          right: 0;
-        }
-        &::before {
-          top: 0;
-          left: 0;
-        }
-        &:hover {
-          border: 0;
-        }
-        &:hover::after,
-        &:hover::before {
-          width: 100%;
-          height: 100%;
-        }
-        &:hover::after {
-          border-bottom-color: #000000;
-          border-left-color: #000000;
-          transition: width 0.3s ease-out, height 0.3s ease-out 0.3s;
-        }
-        &:hover::before {
-          border-top-color: #000000;
-          border-right-color: #000000;
-          transition: width 0.3s ease-out, height 0.3s ease-out 0.3s;
-        }
-        p {
-          font-family: 'NotoSansJP-B';
-          display: inline;
-          font-size: 15px;
-          position: absolute;
-          left: calc(50% - 39px);
-          top: calc(50% - 13px);
-          color: black;
-          // &:hover {
-          //   color: rgb(255, 255, 255);
-          // }
         }
       }
     }

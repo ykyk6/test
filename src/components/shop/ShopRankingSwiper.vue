@@ -190,7 +190,8 @@ export default defineComponent({
       transform: translate(-52%, 0);
     }
     p {
-      font-size: 37px;
+      font-size: 34px;
+      line-height: 55px;
     }
   }
 

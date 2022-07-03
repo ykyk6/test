@@ -151,7 +151,7 @@ export default defineComponent({
     letter-spacing: 1px;
     width: 270px;
     text-align: center;
-    margin-bottom: 33px;
+    margin-bottom: 40px;
     position: relative;
     &::before {
       content: '— おすすめ品 — ';
@@ -165,7 +165,8 @@ export default defineComponent({
       transform: translate(-55%, 0);
     }
     p {
-      font-size: 37px;
+      font-size: 34px;
+      line-height: 55px;
     }
   }
   .q-card {
@@ -177,8 +178,19 @@ export default defineComponent({
     flex-direction: column;
     align-items: center;
   }
+
+  @media (min-width: 595px) {
+    .q-tabs {
+      width: 81%;
+    }
+  }
+  @media (max-width: 594px) {
+    .q-tabs {
+      width: 67%;
+    }
+  }
   .q-tabs {
-    width: 81%;
+    // width: 81%;
     min-height: 45px;
     min-width: none;
   }

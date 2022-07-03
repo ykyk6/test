@@ -74,9 +74,15 @@ export default defineComponent({
 @media (min-width: 1100px) {
   .recommend-container {
     width: 100%;
-    // padding-left: 40px;
     .contain {
-      // width: 100%;
+      .recommend-item {
+        a {
+          .img-box {
+            width: 192px;
+            height: 216px;
+          }
+        }
+      }
     }
   }
 }
@@ -87,24 +93,41 @@ export default defineComponent({
     padding: 0px;
     .contain {
       width: 96%;
+      .recommend-item {
+        a {
+          .img-box {
+            width: 192px;
+            height: 216px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 594px) {
+  .recommend-container {
+    margin-left: 15px;
+    .contain {
+      width: 90%;
+      .recommend-item {
+        a {
+          .img-box {
+            width: 175px;
+            height: 205px;
+          }
+        }
+      }
     }
   }
 }
 .recommend-container {
   .contain {
-    // width: 100%;
     display: flex;
-    // justify-content: space-around;
     .swiper {
       width: 100%;
       display: flex;
-      // justify-content: space-around;
-      .slide {
-        // border: 1px solid rgb(218, 218, 218);
-      }
       .swiper-button-prev,
       .swiper-button-next {
-        // border: 1px solid #cdbfbf;
         top: 40%;
       }
       .swiper-button-prev {
@@ -115,11 +138,7 @@ export default defineComponent({
       }
     }
     .recommend-item {
-      // width: 18%;
-      // height: 300px;
       padding-bottom: 15px;
-      // padding: 2px 2px 15px 2px
-      // background: pink;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -139,8 +158,7 @@ export default defineComponent({
         }
         .img-box {
           // width: 192px;
-          width: 192px;
-          height: 216px;
+          // height: 216px;
           position: relative;
           &::after {
             content: '';

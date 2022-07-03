@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="product-container">
     <div class="content">
       <div class="category"></div>
       <div class="product-breadcrumbs">
@@ -110,43 +110,47 @@
           <div class="left">
             <div class="left_1">
               <p class="title">サイズ</p>
-              <table class="size-table">
-                <tbody>
-                  <tr class="">
-                    <th>サイズ</th>
-                    <th>身幅</th>
-                    <th>着丈</th>
-                    <th>裄丈</th>
-                    <th>裾幅</th>
-                  </tr>
-                  <tr>
-                    <th>F</th>
-                    <td>80cm</td>
-                    <td>66cm</td>
-                    <td>47cm</td>
-                    <td>76cm</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="table-wrapper">
+                <table class="size-table">
+                  <tbody>
+                    <tr class="">
+                      <th>サイズ</th>
+                      <th>身幅</th>
+                      <th>着丈</th>
+                      <th>裄丈</th>
+                      <th>裾幅</th>
+                    </tr>
+                    <tr>
+                      <th>F</th>
+                      <td>80cm</td>
+                      <td>66cm</td>
+                      <td>47cm</td>
+                      <td>76cm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div class="left_2">
               <p class="title">素材</p>
-              <div class="material_text">
-                <span>
-                  ●品質／表地 綿 １００％・別布 綿 ９５％・ポリウレタン ５％
-                </span>
-                <span>■バングラデシュ製</span>
-                <div class="material_text_color">
-                  <span>※商品のカラーについて</span>
+              <div class="text-wrapper">
+                <div class="material_text">
                   <span>
-                    ライティング等により実際の色と異なる場合がございます。<br />また、商品の色はお客様がご覧になっているモニター・画面環境などの関係上、実際の色と見え方が多少異なる場合がございます。予めご了承ください。
+                    ●品質／表地 綿 １００％・別布 綿 ９５％・ポリウレタン ５％
                   </span>
+                  <span>■バングラデシュ製</span>
+                  <div class="material_text_color">
+                    <span>※商品のカラーについて</span>
+                    <span>
+                      ライティング等により実際の色と異なる場合がございます。<br />また、商品の色はお客様がご覧になっているモニター・画面環境などの関係上、実際の色と見え方が多少異なる場合がございます。予めご了承ください。
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="right">
-            <div class="">
+            <div class="content-wrapper">
               <p class="title">アイテム説明</p>
               <div class="item_text">
                 <p>オーバーサイズで今っぽく♪</p>
@@ -440,7 +444,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import '@/styles/common.css';
-.container {
+.product-container {
   width: 100%;
   font-family: 'NotoSansJP-R';
   display: flex;
@@ -451,11 +455,9 @@ export default defineComponent({
   // background-image: url('@/assets/icon/bg-w.png');
   @media (min-width: 950px) {
     .content {
-      // margin-right: 34px;
       width: 1100px;
       padding: 0 32px;
       .breadcrumbs {
-        // width: 480px;
         padding-left: 12px;
       }
     }
@@ -482,7 +484,7 @@ export default defineComponent({
       display: none;
     }
     .product-breadcrumbs {
-      // background: pink;
+      padding-left: 5px;
       padding-bottom: 16px;
       width: 100%;
       .breadcrumbs-el {
@@ -514,11 +516,29 @@ export default defineComponent({
             padding-right: 7px;
             .right-wrapper {
               .color_choice {
+                width: 465px;
+                .title {
+                  width: calc(98% - 2px);
+                  p {
+                    &::after {
+                      left: 0;
+                    }
+                  }
+                }
                 .color_choice-box {
                   .img_color_wrapper {
+                    width: 300px;
                     .img-box {
+                      width: 50px;
                       margin-left: 10px;
                     }
+                    .text {
+                      margin-left: 15px;
+                      width: 197px;
+                    }
+                  }
+                  .add-cart {
+                    width: 148px;
                   }
                 }
               }
@@ -536,20 +556,86 @@ export default defineComponent({
             justify-content: center;
           }
           .right {
-            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             .right-wrapper {
               .color_choice {
+                width: 465px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                .title {
+                  width: calc(98% - 2px);
+                  p {
+                    &::after {
+                      left: 0;
+                    }
+                  }
+                }
                 .color_choice-box {
                   .img_color_wrapper {
+                    width: 300px;
                     .img-box {
+                      width: 50px;
                       margin-left: 10px;
                     }
+                    .text {
+                      margin-left: 15px;
+                      width: 197px;
+                    }
+                  }
+                  .add-cart {
+                    width: 148px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 594px) {
+        .product_content {
+          .right {
+            display: flex;
+            align-items: flex-start;
+            .right-wrapper {
+              width: 95vw;
+              .tag,
+              .brand,
+              .name,
+              .price,
+              .sale_price,
+              .text {
+                padding-left: 10px;
+              }
+              .color_choice {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .title {
+                  width: 100%;
+                  padding-left: 8px;
+                  p {
+                    &::after {
+                      left: -4px;
+                    }
+                  }
+                }
+                .color_choice-box {
+                  .img_color_wrapper {
+                    width: 50%;
+                    .img-box {
+                      display: none;
+                    }
+                    .text {
+                      margin-left: 0px;
+                    }
+                  }
+                  .add-cart {
+                    width: 45%;
                   }
                 }
               }
@@ -558,13 +644,13 @@ export default defineComponent({
         }
       }
       .product_content {
-        // margin-bottom: 10px;
         .left {
           display: flex;
         }
         .right {
           display: flex;
           .right-wrapper {
+            padding-left: -10px;
             .tag {
               margin-bottom: 9px;
               .new_tag {
@@ -647,9 +733,10 @@ export default defineComponent({
               .title {
                 margin-top: 15px;
                 margin-bottom: -14px;
+                position: relative;
+                // width: calc(98% - 1px);
                 p {
                   font-weight: bold;
-                  width: 465px;
                   font-size: 15px;
                   padding-bottom: 5px;
                   position: relative;
@@ -660,21 +747,19 @@ export default defineComponent({
                     border-bottom: 1px dotted black;
                     position: absolute;
                     top: 0;
-                    left: 0;
+                    // left: 0;
                   }
                 }
               }
               .color_choice-box {
                 display: flex;
                 align-items: center;
-                width: 465px;
+                width: 98%;
                 border-bottom: 1px dotted #4c4c4c;
                 padding: 16px 0;
                 .img_color_wrapper {
-                  width: 300px;
                   display: flex;
                   .img-box {
-                    width: 50px;
                     .img-con {
                       width: 47px;
                       height: 57px;
@@ -690,8 +775,8 @@ export default defineComponent({
                     }
                   }
                   .text {
-                    margin-left: 15px;
-                    width: 197px;
+                    // margin-left: 15px;
+                    // width: 197px;
                     height: 54px;
                     display: flex;
                     flex-direction: column;
@@ -717,7 +802,7 @@ export default defineComponent({
                   }
                 }
                 .add-cart {
-                  width: 148px;
+                  // width: 148px;
                   height: 45px;
                   background: rgb(100, 100, 100);
                   border-radius: 6px;
@@ -770,12 +855,39 @@ export default defineComponent({
             width: 50%;
             align-items: flex-start;
             padding-left: 10px;
+            .title {
+              width: 470px;
+            }
+            .left_1 {
+              .table-wrapper {
+                width: 470px;
+              }
+            }
+            .left_2 {
+              .text-wrapper {
+                width: 470px;
+                .material_text {
+                  width: 440px;
+                }
+              }
+            }
           }
           .right {
             width: 50%;
             align-items: flex-end;
-            .title {
-              margin-top: 10px;
+            .content-wrapper {
+              .title {
+                margin-top: 10px;
+                width: 470px;
+              }
+              .item_text {
+                width: 440px;
+                .detailed {
+                  table {
+                    width: 445px;
+                  }
+                }
+              }
             }
           }
         }
@@ -796,12 +908,84 @@ export default defineComponent({
           .left {
             width: 100%;
             align-items: center;
+            .title {
+              width: 470px;
+            }
+            .left_1 {
+              align-items: center;
+              .table-wrapper {
+                width: 470px;
+              }
+            }
+            .left_2 {
+              align-items: center;
+              .text-wrapper {
+                width: 470px;
+                .material_text {
+                  width: 440px;
+                }
+              }
+            }
           }
           .right {
             width: 100%;
             align-items: center;
+            .content-wrapper {
+              align-items: center;
+              .title {
+                width: 470px;
+                margin-top: 20px;
+              }
+              .item_text {
+                width: 440px;
+                .detailed {
+                  table {
+                    width: 445px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 594px) {
+        .more {
+          .left {
             .title {
-              margin-top: 20px;
+              width: 100%;
+            }
+            .left_1 {
+              align-items: center;
+              .table-wrapper {
+                width: 100%;
+              }
+            }
+            .left_2 {
+              align-items: center;
+              .text-wrapper {
+                width: 100%;
+                .material_text {
+                  width: 95%;
+                }
+              }
+            }
+          }
+          .right {
+            .content-wrapper {
+              width: 100%;
+              align-items: center;
+              .title {
+                width: 100%;
+              }
+              .item_text {
+                width: 95%;
+                .detailed {
+                  table {
+                    width: 90%;
+                  }
+                }
+              }
             }
           }
         }
@@ -815,43 +999,55 @@ export default defineComponent({
             margin-top: 10px;
             padding: 4px 10px;
             font-weight: bold;
-            width: 470px;
+            // width: 470px;
             background: rgba(181, 183, 183, 0.3);
             color: rgb(0, 0, 0);
             font-size: 14px;
           }
           .left_1 {
-            .size-table {
-              margin-left: 13px;
-              margin-top: 25px;
-              border-collapse: collapse;
-              text-align: center;
-              font-size: 10px;
-              th {
-                background: rgba(148, 148, 148, 0.3);
-              }
-              th,
-              td {
-                border: 1px solid rgba(71, 71, 71, 0.8);
-                padding: 0 10px;
-                min-width: 60px;
-                height: 35px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            .table-wrapper {
+              // width: 470px;
+              .size-table {
+                margin-left: 13px;
+                margin-top: 15px;
+                border-collapse: collapse;
+                text-align: center;
+                font-size: 10px;
+                th {
+                  background: rgba(148, 148, 148, 0.3);
+                }
+                th,
+                td {
+                  border: 1px solid rgba(71, 71, 71, 0.8);
+                  padding: 0 10px;
+                  min-width: 60px;
+                  height: 35px;
+                }
               }
             }
           }
 
           .left_2 {
+            width: 100%;
             margin-top: 17px;
-            .material_text {
-              margin-left: 13px;
-              width: 440px;
-              span {
-                display: inline-block;
-              }
-              .material_text_color {
-                border-top: 1px dotted grey;
-                margin-top: 8px;
-                padding-top: 8px;
+            display: flex;
+            flex-direction: column;
+            .text-wrapper {
+              .material_text {
+                margin-left: 13px;
+                // width: 440px;
+                span {
+                  display: inline-block;
+                }
+                .material_text_color {
+                  border-top: 1px dotted grey;
+                  margin-top: 8px;
+                  padding-top: 8px;
+                }
               }
             }
           }
@@ -859,40 +1055,45 @@ export default defineComponent({
         .right {
           display: flex;
           flex-direction: column;
-          .title {
-            font-weight: bold;
-            padding: 4px 10px;
-            width: 470px;
-            background: rgba(181, 183, 183, 0.3);
-            color: rgb(0, 0, 0);
-            font-size: 14px;
-          }
-          .item_text {
-            width: 440px;
-            margin-left: 10px;
-            span {
-              display: inline-block;
+          .content-wrapper {
+            // width: 100%;
+            display: flex;
+            flex-direction: column;
+            .title {
+              font-weight: bold;
+              padding: 4px 10px;
+              // width: 470px;
+              background: rgba(181, 183, 183, 0.3);
+              color: rgb(0, 0, 0);
+              font-size: 14px;
             }
-            .detailed {
-              margin-top: 20px;
-              table {
-                border-collapse: collapse;
-                width: 445px;
-                font-size: 10px;
-                th {
-                  background: rgba(175, 175, 175, 0.6);
-                  text-align: left;
-                  width: 30%;
-                }
-                td {
-                  background: rgba(226, 226, 226, 0.5);
-                  width: 70%;
-                }
-                th,
-                td {
-                  border: 2px solid rgba(255, 255, 255, 0.8);
-                  padding: 7px 20px;
-                  height: 30px;
+            .item_text {
+              // width: 440px;
+              margin-left: 10px;
+              span {
+                display: inline-block;
+              }
+              .detailed {
+                margin-top: 20px;
+                table {
+                  border-collapse: collapse;
+                  // width: 445px;
+                  font-size: 10px;
+                  th {
+                    background: rgba(175, 175, 175, 0.6);
+                    text-align: left;
+                    width: 30%;
+                  }
+                  td {
+                    background: rgba(226, 226, 226, 0.5);
+                    width: 70%;
+                  }
+                  th,
+                  td {
+                    border: 2px solid rgba(255, 255, 255, 0.8);
+                    padding: 7px 20px;
+                    height: 30px;
+                  }
                 }
               }
             }

@@ -526,6 +526,7 @@ export default defineComponent({
                   }
                 }
                 .color_choice-box {
+                  width: 98%;
                   .img_color_wrapper {
                     width: 300px;
                     .img-box {
@@ -574,6 +575,7 @@ export default defineComponent({
                   }
                 }
                 .color_choice-box {
+                  width: 98%;
                   .img_color_wrapper {
                     width: 300px;
                     .img-box {
@@ -754,7 +756,7 @@ export default defineComponent({
               .color_choice-box {
                 display: flex;
                 align-items: center;
-                width: 98%;
+                // width: 100%;
                 border-bottom: 1px dotted #4c4c4c;
                 padding: 16px 0;
                 .img_color_wrapper {
@@ -1055,6 +1057,7 @@ export default defineComponent({
         .right {
           display: flex;
           flex-direction: column;
+          margin-bottom: -15px;
           .content-wrapper {
             // width: 100%;
             display: flex;

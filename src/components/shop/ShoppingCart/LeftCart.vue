@@ -42,7 +42,7 @@
           />
         </div>
         <div class="calculate">
-          <div class="calculate_title">小計</div>
+          <div class="calculate_title">価格</div>
           <div class="calculate_price">{{ item.price }}</div>
         </div>
       </div>
@@ -122,8 +122,6 @@ export default defineComponent({
     }
   }
   .img {
-    // width: 20%;
-    // display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -147,7 +145,6 @@ export default defineComponent({
       }
       &:hover::after {
         opacity: 1;
-        // transition: opacity 0.2s ease-in;
       }
       .img-con {
         width: 100%;
@@ -164,7 +161,7 @@ export default defineComponent({
     }
   }
   .info {
-    height: 150px;
+    height: 140px;
     display: flex;
     align-items: center;
     margin-left: 20px;
@@ -176,6 +173,7 @@ export default defineComponent({
     @media (max-width: 629px) {
       .info-wrapper {
         font-size: 13px;
+        font-weight: bold;
       }
     }
     .info-wrapper {

@@ -617,6 +617,8 @@ export default defineComponent({
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                padding: 0 5px;
+                margin-left: 2px;
                 .title {
                   width: 100%;
                   padding-left: 8px;
@@ -627,6 +629,7 @@ export default defineComponent({
                   }
                 }
                 .color_choice-box {
+                  width: 100%;
                   .img_color_wrapper {
                     width: 50%;
                     .img-box {
@@ -968,7 +971,7 @@ export default defineComponent({
               .text-wrapper {
                 width: 100%;
                 .material_text {
-                  width: 95%;
+                  width: 93%;
                 }
               }
             }
@@ -981,7 +984,7 @@ export default defineComponent({
                 width: 100%;
               }
               .item_text {
-                width: 95%;
+                width: 93%;
                 .detailed {
                   table {
                     width: 90%;

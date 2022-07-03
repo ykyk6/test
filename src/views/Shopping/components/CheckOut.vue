@@ -3,19 +3,18 @@
     <div class="contain">
       <div class="order_check_title">ご注文内容の確認</div>
       <div class="order_check_list">
-        <!-- <q-scroll-area style="height: 240px"> -->
         <table>
           <tbody>
             <tr>
-              <th class="item_img">商品</th>
+              <th class="item_img img_td">商品</th>
               <th class="item_name">商品名</th>
               <th class="item_color">カラー</th>
+              <th class="item_price">価格</th>
               <th class="item_quantity">数量</th>
-              <th class="item_price">価格（税込）</th>
             </tr>
             <!-- 商品內容 -->
             <tr v-for="item in cartItems" :key="item.pic">
-              <td>
+              <td class="img_td">
                 <div class="img_box_wrapper">
                   <div class="img-box">
                     <div class="img-con">
@@ -25,9 +24,9 @@
                 </div>
               </td>
               <td>{{ item.name }}</td>
-              <td>{{ item.color }}（Fサイズ）</td>
-              <td>{{ item.quantity }}</td>
+              <td>{{ item.color }}</td>
               <td>￥{{ item.price }}</td>
+              <td>{{ item.quantity }}</td>
             </tr>
           </tbody>
         </table>
@@ -517,6 +516,11 @@ export default defineComponent({
 
 <style lang="scss" scope>
 @import '@/styles/common.css';
+@media (max-width: 594px) {
+  .checkout-container {
+    width: 100%;
+  }
+}
 .checkout-container {
   font-family: 'NotoSansJP-R';
   display: flex;
@@ -548,6 +552,32 @@ export default defineComponent({
           width: 30%;
         }
       }
+      .order_check_shipping {
+        padding-left: 0%;
+        .shipping-left {
+          width: calc(18% + 1px);
+          text-align: left;
+          padding-left: 7%;
+        }
+        .shipping-right {
+          width: 82%;
+          text-align: right;
+          padding-right: 35px;
+        }
+      }
+      .order_check_total {
+        padding-left: 0%;
+        .total-left {
+          width: calc(18% + 1px);
+          text-align: left;
+          padding-left: 7%;
+        }
+        .total-right {
+          width: 82%;
+          text-align: right;
+          padding-right: 35px;
+        }
+      }
     }
   }
   @media (max-width: 1249px) {
@@ -565,6 +595,32 @@ export default defineComponent({
         .CVS_pay,
         .card_pay {
           width: 30%;
+        }
+      }
+      .order_check_shipping {
+        padding-left: 0%;
+        .shipping-left {
+          width: calc(18% + 1px);
+          text-align: left;
+          padding-left: 7%;
+        }
+        .shipping-right {
+          width: 82%;
+          text-align: right;
+          padding-right: 35px;
+        }
+      }
+      .order_check_total {
+        padding-left: 0%;
+        .total-left {
+          width: calc(18% + 1px);
+          text-align: left;
+          padding-left: 7%;
+        }
+        .total-right {
+          width: 82%;
+          text-align: right;
+          padding-right: 35px;
         }
       }
     }
@@ -723,7 +779,6 @@ export default defineComponent({
         .address_enter_title,
         .pay_title {
           text-align: center;
-          // background: grey;
         }
         .pay_list {
           display: flex;
@@ -739,25 +794,58 @@ export default defineComponent({
       }
     }
   }
+
+  @media (max-width: 594px) {
+    .contain {
+      width: 100%;
+      .img_td {
+        display: none;
+      }
+      .order_check_shipping {
+        padding-left: 0%;
+        .shipping-left {
+          text-align: left;
+          width: 70%;
+          padding-left: 10px;
+        }
+        .shipping-right {
+          width: 30%;
+          text-align: right;
+          padding-right: 10px;
+        }
+      }
+      .order_check_total {
+        padding-left: 0%;
+        .total-left {
+          text-align: left;
+          width: 70%;
+          padding-left: 10px;
+        }
+        .total-right {
+          width: 30%;
+          text-align: right;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+
   .contain {
-    // background: pink;
+    // width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     .order_check_title {
       margin-top: 40px;
       width: 90%;
-      // text-align: left;
       font-size: 18px;
       font-weight: bold;
-      // background: rgb(218, 218, 218);
       padding: 5px;
       position: relative;
     }
     .order_check_list {
       margin-top: 20px;
       width: 90%;
-      // background: rgb(165, 70, 70);
       table {
         width: 100%;
         border-collapse: collapse;
@@ -813,21 +901,19 @@ export default defineComponent({
         border-left: 1px solid rgb(97, 90, 90);
         border-right: 1px solid rgb(97, 90, 90);
         border-bottom: 1px solid rgb(97, 90, 90);
-        padding-left: 73%;
+        // padding-left: 73%;
         display: flex;
         .shipping-left {
-          width: 37%;
+          // width: 37%;
           height: 35px;
           line-height: 35px;
-          text-align: center;
-
-          // background: pink;
+          // text-align: center;
         }
         .shipping-right {
-          width: 63%;
+          // width: 63%;
           height: 35px;
           line-height: 35px;
-          text-align: center;
+          // text-align: center;
           // background: green;
         }
       }
@@ -838,20 +924,20 @@ export default defineComponent({
         border-left: 1px solid rgb(97, 90, 90);
         border-right: 1px solid rgb(97, 90, 90);
         border-bottom: 1px solid rgb(97, 90, 90);
-        padding-left: 73%;
+        // padding-left: 73%;
         display: flex;
         .total-left {
-          width: 37%;
+          // width: 37%;
           height: 35px;
           line-height: 35px;
-          text-align: center;
+          // text-align: center;
           // background: pink;
         }
         .total-right {
-          width: 63%;
+          // width: 63%;
           height: 35px;
           line-height: 35px;
-          text-align: center;
+          // text-align: center;
           // background: green;
         }
       }

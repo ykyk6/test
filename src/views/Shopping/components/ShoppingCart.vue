@@ -174,14 +174,12 @@ export default defineComponent({
         display: flex;
         flex-direction: column;
         align-items: center;
-        // min-height: 500px;
         .left {
           width: 90%;
           align-items: center;
         }
         .right {
           width: 90%;
-          // margin-bottom: 20px;
         }
       }
     }
@@ -191,7 +189,6 @@ export default defineComponent({
         display: flex;
         flex-direction: column;
         align-items: center;
-        // min-height: 500px;
         .left {
           width: 90%;
           align-items: center;
@@ -207,7 +204,6 @@ export default defineComponent({
         display: flex;
         flex-direction: column;
         align-items: center;
-        // background: pink;
         .left {
           width: 90%;
           align-items: center;
@@ -223,7 +219,6 @@ export default defineComponent({
         display: flex;
         flex-direction: column;
         align-items: center;
-        // background: pink;
         .left {
           width: 90%;
           align-items: center;
@@ -239,7 +234,6 @@ export default defineComponent({
         display: flex;
         flex-direction: column;
         align-items: center;
-        // background: pink;
         .left {
           width: 90%;
           align-items: center;
@@ -252,13 +246,10 @@ export default defineComponent({
 
     .shopping_cart_wrapper {
       .left {
-        // padding-right: 15px;
         padding-bottom: 20px;
-        // background: rgba(214, 214, 214, 0.3);
         display: flex;
         flex-direction: column;
         border-radius: 5px;
-        // padding-left: 10px;
         .CartNoShow {
           width: 100%;
           font-size: 20px;
@@ -272,7 +263,6 @@ export default defineComponent({
         padding: 10px;
         display: flex;
         justify-content: center;
-        // background: rgba(189, 189, 189, 0.6);
       }
     }
   }

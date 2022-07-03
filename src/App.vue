@@ -341,12 +341,10 @@ export default defineComponent({
   overflow: hidden;
 }
 .header-style {
-  // background: white;
   color: black;
 }
 .q-layout__section--marginal {
   background-color: transparent;
-  // color: #fff;
 }
 .q-toolbar {
   padding: 0px;
@@ -375,7 +373,6 @@ export default defineComponent({
   }
 }
 .TabBarTopNotShow {
-  // animation: fadeOut 2s linear 0s infinite;
   opacity: 0;
   position: absolute;
 }
@@ -433,12 +430,10 @@ export default defineComponent({
 
 .tab-bar-bottom-wrapper {
   display: flex;
-  // background: rgb(255, 255, 255);
   width: 100%;
   .tab-bar-bottom-right {
     display: flex;
     justify-content: center;
-    // background: pink;
     width: 100%;
     border: 1px dotted #787878;
     background: rgba(255, 255, 255, 0.8);
@@ -481,8 +476,6 @@ export default defineComponent({
 }
 // small-size-bar
 @media (min-width: 700px) {
-  .normal-show {
-  }
   .small-show {
     display: none;
   }
@@ -491,12 +484,9 @@ export default defineComponent({
   .normal-show {
     display: none;
   }
-  .small-show {
-  }
 }
 
 // small show
-
 .small-navbar-space {
   width: 100%;
   height: 78px;
@@ -514,7 +504,6 @@ export default defineComponent({
   margin-bottom: 10px;
   top: 0;
   z-index: 20;
-  // border-bottom: 1px dotted black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -534,7 +523,7 @@ export default defineComponent({
   .bar {
     position: relative;
     display: block;
-    width: 21px;
+    width: 20px;
     height: 3px;
     margin: 5px auto;
     background-color: #fff;
@@ -563,7 +552,7 @@ export default defineComponent({
 
   &.opened {
     .bar:nth-of-type(1) {
-      transform: translateY(6px) rotate(-45deg);
+      transform: translateY(2px) rotate(-45deg);
     }
     .bar:nth-of-type(2) {
       opacity: 0;
@@ -574,7 +563,7 @@ export default defineComponent({
 
     &:hover {
       .bar:nth-of-type(1) {
-        transform: translateY(8.5px) rotate(-40.5deg);
+        transform: translateY(5.5px) rotate(-40.5deg);
       }
       .bar:nth-of-type(2) {
         opacity: 0.1;
@@ -594,10 +583,6 @@ export default defineComponent({
     width: 100%;
     height: 100%;
   }
-}
-
-.small-show {
-  // background: pink;
 }
 .BarOpenHeight {
   height: 895px;

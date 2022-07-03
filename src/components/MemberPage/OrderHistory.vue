@@ -501,7 +501,7 @@ export default defineComponent({
       }
     }
   }
-  @media (max-width: 610px) {
+  @media (max-width: 594px) {
     .content {
       width: 95%;
       .order-wrapper {
@@ -615,23 +615,55 @@ export default defineComponent({
           width: 98%;
           display: flex;
           flex-direction: column;
-          // height: 235px;
           border: 1px solid rgb(121, 121, 121);
           border-radius: 10px;
+          @media (min-width: 595px) {
+            .order-top {
+              .order-id {
+                display: flex;
+              }
+              .order-date {
+                width: 17%;
+              }
+              .order-total {
+                width: 20%;
+              }
+              .order-delievery {
+                width: 16%;
+              }
+            }
+          }
+          @media (max-width: 594px) {
+            .order-top {
+              .order-id {
+                display: none;
+              }
+              .order-date {
+                width: 50%;
+              }
+              .order-total {
+                width: 30%;
+              }
+              .order-delievery {
+                width: 20%;
+              }
+            }
+          }
           .order-top {
             width: 100%;
             height: 28%;
-            // background: pink;
             display: flex;
             .order-date {
-              width: 17%;
+              // width: 17%;
             }
             .order-id {
               width: 45%;
             }
-            .order-total,
+            .order-total {
+              // width: 20%;
+            }
             .order-delievery {
-              width: 18%;
+              // width: 16%;
             }
             .order-date {
               display: flex;
@@ -642,12 +674,9 @@ export default defineComponent({
                 font-size: 12px;
                 color: grey;
               }
-              // &-text {
-              //   font-size: 15px;
-              // }
             }
             .order-id {
-              display: flex;
+              // display: flex;
               flex-direction: column;
               justify-content: center;
               padding-left: 10px;
@@ -655,9 +684,6 @@ export default defineComponent({
                 font-size: 12px;
                 color: grey;
               }
-              // &-text {
-              //   font-size: 15px;
-              // }
             }
             .order-delievery {
               display: flex;
@@ -668,9 +694,6 @@ export default defineComponent({
                 font-size: 12px;
                 color: grey;
               }
-              // &-text {
-              //   font-size: 15px;
-              // }
             }
             .order-total {
               display: flex;
@@ -695,38 +718,32 @@ export default defineComponent({
             .order-name {
               padding-left: 20px;
               height: 100%;
-              // background: rgb(80, 117, 80);
               display: flex;
               align-items: center;
               justify-content: center;
-              // border-right: 1px dotted black;
               &:hover {
                 text-decoration: underline;
                 cursor: pointer;
               }
               .number-wrapper {
-                // margin-top: 5px;
                 display: flex;
                 color: grey;
-                font-size: 13px;
+                font-size: 12px;
               }
               .name-wrapper {
                 margin-top: 1px;
                 width: 100%;
                 height: 72%;
-                // background: wheat;
                 display: flex;
                 flex-direction: column;
-                // border-right: 1px dotted #000;
-
                 .name-text {
-                  font-size: 17px;
+                  margin-top: 3px;
+
+                  font-size: 15px;
                 }
                 .color-wrapper {
-                  // margin-top: 3px;
                   display: flex;
                   .color-tag {
-                    // width: 20px;
                     margin-right: 8px;
                     height: 20px;
                     background: rgba(204, 204, 204, 0.5);
@@ -736,14 +753,11 @@ export default defineComponent({
                   }
                 }
                 .price-wrapper {
-                  // margin-top: 4px;
                   display: flex;
                   margin-top: 3px;
-
                   .price-text {
                     margin-top: 3px;
-                    font-size: 16px;
-                    // color: red;
+                    font-size: 15px;
                   }
                 }
               }
@@ -997,13 +1011,15 @@ export default defineComponent({
     .detail_total {
       padding-left: 0%;
       &-left {
-        width: 85%;
+        width: 70%;
         text-align: left;
-        padding-left: 15px;
+        padding-left: 10px;
       }
 
       &-right {
-        width: 15%;
+        width: 30%;
+        text-align: right;
+        padding-right: 10px;
       }
     }
     .detail_order_pay,

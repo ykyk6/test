@@ -62,7 +62,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, reactive } from 'vue'
+import { defineComponent, onMounted, reactive } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 import axios from 'axios'
@@ -155,7 +155,6 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-  // background: rgba(219, 219, 219, 0.3);
   .like-breadcrumbs {
     margin-top: 30px;
     width: 100%;
@@ -296,9 +295,28 @@ export default defineComponent({
     }
   }
 
+  @media (max-width: 594px) {
+    .content {
+      .content-wrapper {
+        margin-left: 0px;
+        .like-item {
+          width: 50%;
+          .like-link-wrapper {
+            .img-box {
+            }
+            .text {
+              width: 70%;
+              font-size: 12px;
+              height: 52px;
+              padding-left: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .content {
-    // width: 1100px;
-    // height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -344,8 +362,6 @@ export default defineComponent({
       flex-wrap: wrap;
       .like-item {
         padding: 10px 0px;
-        // width: 25%;
-        /* background: pink; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -371,9 +387,7 @@ export default defineComponent({
             cursor: pointer;
           }
           .img-box {
-            // width: 63%;
             height: auto;
-            // border: 1px solid black;
             border: 1px solid #c17878b0;
             position: relative;
             &::after {
@@ -401,8 +415,6 @@ export default defineComponent({
           }
           .text {
             margin-top: 13px;
-            // width: 63%;
-            // font-size: 14px;
             font-weight: bold;
             .title {
             }
@@ -414,10 +426,8 @@ export default defineComponent({
         }
         .toShopping {
           margin-top: 10px;
-          // width: 63%;
           height: 30px;
           line-height: 28px;
-          // border: 1px solid #ef7c7c;
           border-radius: 5px;
           text-align: center;
           background: #7893af;
@@ -430,7 +440,6 @@ export default defineComponent({
         .deleteButton {
           margin-top: 8px;
           margin-bottom: 10px;
-          // width: 63%;
           height: 30px;
           line-height: 28px;
           border: 1px solid grey;

@@ -221,16 +221,13 @@ export default defineComponent({
             return item.user_mail === user_mail
           })
           orderNotFoundIndex.value = index
-          // console.log(index)
           // orders資料
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           const db_order = res.data.result.filter((item: any) => {
             return item.user_mail === user_mail && item.user_mail.length !== 0
           })
-          // const s_user_data = JSON.stringify(db_order)
-          // const o_user_data = JSON.parse(s_user_data)
           userorders.value = db_order
-          console.log(userorders)
+          // console.log(userorders)
         }
       })
     })
@@ -274,7 +271,6 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
   margin-bottom: 30px;
   @media (min-width: 1100px) {
     .content {

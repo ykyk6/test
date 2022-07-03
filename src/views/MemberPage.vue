@@ -62,7 +62,7 @@ export default defineComponent({
           })
           // console.log(temp_user_data)
           user_data.value = temp_user_data
-          console.log(typeof user_data.value)
+          // console.log(typeof user_data.value)
         }
       })
     })
@@ -84,8 +84,6 @@ export default defineComponent({
   align-items: center;
   .cotain {
     width: 1100px;
-    // height: 800px;
-    // background: pink;
     .member_title {
       width: 100%;
       text-align: center;
@@ -100,8 +98,6 @@ export default defineComponent({
       .member_content {
         width: 100%;
         display: flex;
-        // background: orange;
-        // height: 400px;
         &_card {
           width: 100%;
           border: 1px solid black;
@@ -109,7 +105,6 @@ export default defineComponent({
         .q-card {
           box-shadow: none;
           border-radius: 2px;
-          // background: rgba(202, 202, 202, 0.5);
           .q-tabs {
             .q-tab:nth-child(1),
             .q-tab:nth-child(2) {

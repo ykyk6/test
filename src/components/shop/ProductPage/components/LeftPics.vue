@@ -52,8 +52,8 @@ export default defineComponent({
     SwiperSlide
   },
   props: ['imgs'],
-  setup(props) {
-    console.log(props)
+  setup() {
+    // console.log(props)
     const thumbsSwiper = ref<SwiperClass>()
     const setThumbsSwiper = (swiper: SwiperClass) => {
       thumbsSwiper.value = swiper
@@ -105,12 +105,7 @@ export default defineComponent({
     }
   }
 }
-// .top-swiper {
-//   width: 490px;
-// }
 .img-box {
-  // width: 488px;
-  // height: 590px;
   .img-con {
     width: 100%;
     height: 100%;
@@ -126,9 +121,7 @@ export default defineComponent({
   }
 }
 .thumbs-swiper {
-  // width: 472px;
   height: 160px;
-  // background: yellow;
 }
 .small-img {
   margin-top: 20px;
@@ -138,8 +131,6 @@ export default defineComponent({
   .small-img-box {
     margin-top: 20px;
     margin-right: 15px;
-    // width: 63px;
-    // height: 76px;
     border: 1px solid #cdbfbf;
     .small-img-con {
       width: 100%;
@@ -148,7 +139,6 @@ export default defineComponent({
       img {
         max-width: 100%;
         height: 100%;
-        // object-fit: cover;
         position: absolute;
         top: 0;
         left: 0;

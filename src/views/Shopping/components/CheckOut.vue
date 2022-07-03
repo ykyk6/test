@@ -671,6 +671,9 @@ export default defineComponent({
       .pay_title {
         text-align: center;
       }
+      .q-form {
+        width: 700px;
+      }
       .pay_list {
         display: flex;
         flex-direction: column;
@@ -678,118 +681,8 @@ export default defineComponent({
         .bank_pay,
         .CVS_pay,
         .card_pay {
-          width: 60%;
+          width: 70%;
           margin-bottom: 20px;
-        }
-      }
-    }
-  }
-  @media (max-width: 654px) {
-    .contain {
-      width: 650px;
-      .order_check_title,
-      .order_check_list,
-      .address_enter_title,
-      .address_enter_list,
-      .pay_title,
-      .pay_list,
-      .arrow,
-      .order_sure_ {
-        width: 100%;
-      }
-      .order_check_title,
-      .address_enter_title,
-      .pay_title {
-        text-align: center;
-      }
-      .pay_list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .bank_pay,
-        .CVS_pay,
-        .card_pay {
-          width: 60%;
-          margin-bottom: 15px;
-        }
-      }
-    }
-    @media (max-width: 608px) {
-      .contain {
-        width: 600px;
-        .order_check_list {
-          table {
-            th {
-              font-size: 12px;
-            }
-          }
-        }
-        .order_check_title,
-        .order_check_list,
-        .address_enter_title,
-        .address_enter_list,
-        .pay_title,
-        .pay_list,
-        .arrow,
-        .order_sure_ {
-          width: 100%;
-        }
-        .order_check_title,
-        .address_enter_title,
-        .pay_title {
-          text-align: center;
-        }
-        .pay_list {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          .bank_pay,
-          .CVS_pay,
-          .card_pay {
-            width: 70%;
-            margin-bottom: 20px;
-          }
-        }
-      }
-    }
-    @media (max-width: 560px) {
-      .contain {
-        width: 500px;
-        .order_check_list {
-          table {
-            th {
-              font-size: 12px;
-            }
-            td {
-              font-size: 12px;
-            }
-          }
-        }
-        .order_check_title,
-        .order_check_list,
-        .address_enter_title,
-        .address_enter_list,
-        .pay_title,
-        .pay_list,
-        .arrow,
-        .order_sure_ {
-          width: 100%;
-        }
-        .order_check_title,
-        .address_enter_title,
-        .pay_title {
-          text-align: center;
-        }
-        .pay_list {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          .bank_pay,
-          .CVS_pay,
-          .card_pay {
-            width: 80%;
-            margin-bottom: 15px;
-          }
         }
       }
     }
@@ -825,6 +718,20 @@ export default defineComponent({
           width: 30%;
           text-align: right;
           padding-right: 10px;
+        }
+      }
+      .q-form {
+        width: 100%;
+      }
+      .pay_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .bank_pay,
+        .CVS_pay,
+        .card_pay {
+          width: 80%;
+          margin-bottom: 20px;
         }
       }
     }
@@ -864,10 +771,10 @@ export default defineComponent({
           width: 18%;
         }
         .item_name {
-          width: 35%;
+          width: 38%;
         }
         .item_color {
-          width: 20%;
+          width: 17%;
         }
         .item_quantity {
           width: 10%;
@@ -950,11 +857,9 @@ export default defineComponent({
     .address_enter_title {
       margin-top: 40px;
       width: 90%;
-      // text-align: left;
       font-size: 18px;
       font-weight: bold;
       position: relative;
-      // background: rgb(218, 218, 218);
       padding: 5px;
     }
     .address_enter_list {

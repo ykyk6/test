@@ -82,7 +82,7 @@ export default defineComponent({
     })
 
     onMounted(() => {
-      axios.get(process.env.VUE_APP_API + '/users/').then((res) => {
+      axios.get(process.env.VUE_APP_API + '/users').then((res) => {
         if (res.data.success) {
           // user資料
           const db_user = res.data.result.filter((item: useinfoType) => {

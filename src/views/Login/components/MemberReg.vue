@@ -115,7 +115,7 @@ export default defineComponent({
         Swal.fire('', '利用規約を同意してください。', 'warning')
       } else {
         axios
-          .post(process.env.VUE_APP_API + '/users/', {
+          .post(process.env.VUE_APP_API + '/users', {
             name,
             birthday,
             mail,

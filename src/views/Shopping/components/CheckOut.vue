@@ -471,7 +471,7 @@ export default defineComponent({
         }).then((result) => {
           if (result.isConfirmed) {
             axios
-              .post(process.env.VUE_APP_API + '/orders', {
+              .post(process.env.VUE_APP_API + '/orders/', {
                 userMailValue,
                 cartItems,
                 receive,

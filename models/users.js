@@ -3,7 +3,7 @@ import isEmail from "validator/lib/isEmail.js";
 
 const Schema = mongoose.Schema;
 
-const UserSchema = new Schema({
+const userInfo = new Schema({
   name: {
     type: String,
     // required: [true, "缺少名字"],
@@ -42,6 +42,6 @@ const UserSchema = new Schema({
   ],
 });
 
-const users = mongoose.model("users", UserSchema);
+const User = mongoose.model("User", userInfo);
 
-export default users;
+export default User;

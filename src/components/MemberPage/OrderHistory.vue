@@ -214,7 +214,7 @@ export default defineComponent({
     const orderNotFoundIndex = ref(0)
 
     onMounted(() => {
-      axios.get(process.env.VUE_APP_API + '/orders').then((res) => {
+      axios.get(process.env.VUE_APP_API + '/orders/').then((res) => {
         if (res.data.success) {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           const index = res.data.result.findIndex((item: any) => {

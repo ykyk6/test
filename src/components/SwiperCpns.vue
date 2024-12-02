@@ -12,10 +12,7 @@
         <a>
           <div class="img_box">
             <div class="img_con">
-              <img
-                src="https://images.giseleweb.com/articles/55000/55142/wysiwyg/c2d48bc481853320012cb8411eb491e9.jpg"
-                alt=""
-              />
+              <img src="@/assets/img/TNA_01.webp" alt="" />
               <div class="toShopping" @click="toShopping">
                 <p>商品ページはこちらへ</p>
               </div>
@@ -29,10 +26,7 @@
         <a>
           <div class="img_box">
             <div class="img_con">
-              <img
-                src="https://images.giseleweb.com/articles/55000/55144/wysiwyg/9786cb8f0c3f317114508d1678c3178d.jpg"
-                alt=""
-              />
+              <img src="@/assets/img/TNA_02.webp" alt="" />
               <div class="toShopping" @click="toShopping">
                 <p>商品ページはこちらへ</p>
               </div>
@@ -46,10 +40,7 @@
         <a>
           <div class="img_box">
             <div class="img_con">
-              <img
-                src="https://images.giseleweb.com/articles/55000/55144/wysiwyg/d30138c57f1a1af6fce9ac35500669fb.jpg"
-                alt=""
-              />
+              <img src="@/assets/img/TNA_03.webp" alt="" />
               <div class="toShopping" @click="toShopping">
                 <p>商品ページはこちらへ</p>
               </div>
@@ -63,10 +54,7 @@
         <a>
           <div class="img_box">
             <div class="img_con">
-              <img
-                src="https://images.giseleweb.com/articles/55000/55142/wysiwyg/ed862eb41f0f58126c1c07c55c68a893.jpg"
-                alt=""
-              />
+              <img src="@/assets/img/TNA_04.webp" alt="" />
               <div class="toShopping" @click="toShopping">
                 <p>商品ページはこちらへ</p>
               </div>
@@ -80,10 +68,7 @@
         <a>
           <div class="img_box">
             <div class="img_con">
-              <img
-                src="https://images.giseleweb.com/articles/55000/55142/wysiwyg/35b096ed40ff5b574658a43fef7d357b.jpg"
-                alt=""
-              />
+              <img src="@/assets/img/TNA_05.webp" alt="" />
               <div class="toShopping" @click="toShopping">
                 <p>商品ページはこちらへ</p>
               </div>
@@ -97,10 +82,7 @@
         <a>
           <div class="img_box">
             <div class="img_con">
-              <img
-                src="https://images.giseleweb.com/articles/55000/55144/wysiwyg/77e4ed3fc900c2e340621268b1f3615e.jpg"
-                alt=""
-              />
+              <img src="@/assets/img/TNA_06.webp" alt="" />
               <div class="toShopping" @click="toShopping">
                 <p>商品ページはこちらへ</p>
               </div>
